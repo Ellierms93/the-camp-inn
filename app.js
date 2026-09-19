@@ -1,1 +1,4 @@
-const menu=document.querySelector('.menu');const nav=document.querySelector('.topbar nav');menu?.addEventListener('click',()=>nav.classList.toggle('open'));document.querySelectorAll('section').forEach(s=>s.classList.add('reveal'));const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const menu=document.querySelector(".menu"),nav=document.querySelector(".topbar nav");
+menu?.addEventListener("click",()=>nav.classList.toggle("open"));
+nav?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>nav.classList.remove("open")));
+document.querySelector(".booking-strip button")?.addEventListener("click",()=>alert("Availability search will connect to your booking system when it is added."));
